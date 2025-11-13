@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- empêcher le référencement -->
+<meta name="robots" content="noindex, nofollow, noarchive" />
+
+<title>Expériementations Numérique</title>
+
+<!-- favicon -->
+<link rel="shortcut icon" type="image/png" href="https://image.pngaaa.com/914/4229914-middle.png"/>
+
+<!-- pour les mobiles -->
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0" />
+
+<!-- style -->
+ <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body class="scroll-container">
+	<header>
+    <h1>Javascript et Motion design</h1>
+    <p class="premier" id="test">
+      Réalisation d'animation sur P5jsLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed egestas risus, nec efficitur odio. Morbi nec auctor sem. Pellentesque imperdiet euismod risus, quis consequat libero ullamcorper lacinia. In tincidunt nisi ut tempor porttitor. Morbi vehicula vitae turpis at facilisis. Integer at tempor purus. Nullam consequat nisi enim, quis sodales metus hendrerit nec. Donec ullamcorper sapien quis lobortis tempor. Nam vestibulum laoreet magna, id pellentesque justo volutpat ac. Phasellus arcu nisl, aliquam sed lectus vel, mattis dapibus arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum eu nisl eget eros porta tempus.
+    </p>
+     <br>
+       <h2>Sources :</h2>
+       <p>
+        Toutes les images ont été récupéper sur le site : 
+        https://gallica.bnf.fr/accueil/fr/html/accueil-fr
+       </p>
+  </header>
+</body>
+</html> 
+<video class="fullPage" autoplay="true" muted="true" src="img/Mixed.mp4" loop="true"></video>
+<figure>
+  <figcaption><h1>Psychedelique</h1></figcaption>
+<video autoplay="true" muted="true" src="img/Mixed2.mp4" loop="true"></video>
+<figcaption>Animation de fragment d'image lorsque l'on clique avec des fonds de couleurs différents</figcaption>
+</figure>
+<video class="fullPage" class="hoverPlay" autoplay="true" muted="true" src="img/Mixed3.mp4" loop="true"></video>
+<figure>
+  <figcaption><h1>Tâche en mouvement</h1></figcaption>
+<video autoplay="true" muted="true" src="img/Mixed4.mp4" loop="true"></video>
+<figcaption>Image en basse qualité qui se déplace pixel par pixel</figcaption>
+</figure>
+<video class="fullPage" autoplay="true" muted="true" src="img/Mixed5.mp4" loop="true"></video>
+
+<aside>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed egestas risus, nec efficitur odio. Morbi nec auctor sem. Pellentesque imperdiet euismod risus, quis consequat libero ullamcorper lacinia. In tincidunt nisi ut tempor porttitor. Morbi vehicula vitae turpis at facilisis. Integer at tempor purus. Nullam consequat nisi enim, quis sodales metus hendrerit nec. Donec ullamcorper sapien quis lobortis tempor. Nam vestibulum laoreet magna, id pellentesque justo volutpat ac. Phasellus arcu nisl, aliquam sed lectus vel, mattis dapibus arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum eu nisl eget eros porta tempus.  
+</aside>
+
+<!-- ne pas toucher  -->
+<script>
+const container = document.querySelector('html');
+document.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    container.scrollLeft += e.deltaY;
+}, { passive: false });
+
+const video = document.querySelectorAll('.hoverPlay');
+video.forEach((v) => {
+  v.addEventListener('mouseenter', () => {
+  v.play();
+});
+v.addEventListener('mouseleave', () => {
+  v.pause();
+  v.currentTime = 0; // revient au début
+});
+})
+
+</script>
